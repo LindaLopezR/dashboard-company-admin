@@ -1,0 +1,156 @@
+<template name="newIncidence">
+
+  <div class="ui active dimmer" id="loadingNewIncidence">
+    <div class="ui text loader">Loading</div>
+  </div>
+
+  <section class="content-header">
+    <h1>Nueva incidencia</h1>
+    <ol class="breadcrumb">
+        <li><a href="/mainDashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="/companyDashboard/:_id">Gecko</a></li>
+        <li class="active">Nueva incidencia</li>
+    </ol>
+  </section>
+
+  <!-- Formulario -->
+  <section class="content altDef">
+      <form  class="ui form" id="formNewIncidence">
+          <div class="row">
+            <!-- Empresa -->
+            <div class="col-md-6">
+                <div class="box box-primary altIncidence">
+                  <div class="box-header with-border">
+                      <h3 class="box-title">Información</h3>
+                  </div>
+                  <div class="box-body">
+                    <div class="field">
+                        <label>ID</label>
+                        <input type="text" name="idCompany" class="form-control" placeholder="ID">
+                    </div>
+                    <div class="field mrgTop-4">
+                        <label>Fecha programada</label>
+                        <div class="row">
+                          <div class="col-md-6 field">
+                              <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" name="dateStart" class="form-control pull-right" id="dateStart">
+                              </div>
+                          </div>
+                          <div class="col-md-6 bootstrap-timepicker">
+                              <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="text" class="form-control timeStart">
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Fecha fin</label>
+                        <div class="row">
+                          <div class="col-md-6 field">
+                            <div class="input-group date">
+                              <div class="input-group-addon">
+                                  <i class="fa fa-calendar"></i>
+                              </div>
+                              <input type="text" name="dateFinish" class="form-control pull-right" id="dateEnd">
+                            </div>
+                          </div>
+                          <div class="col-md-6 bootstrap-timepicker">
+                            <div class="input-group">
+                              <div class="input-group-addon">
+                                  <i class="fa fa-clock-o"></i>
+                              </div>
+                              <input type="text" class="form-control timeEnd">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- Estado -->
+            <div class="col-md-6">
+              <div class="box box-info altIncidence">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Estado</h3>
+                </div>
+                <div class="box-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="field">
+                        <label>Estado</label>
+                        <select class="form-control" id="stateIncidence">
+                            <option selected="selected" value="open">Abierta</option>
+                            <option value="assigned">Asignada</option>
+                            <option value="solved">Solucionada</option>
+                            <option value="process">En proceso</option>
+                            <option value="pending">Pendiente</option>
+                            <option value="denied">Denegada</option>
+                            <option value="closed">Cerrada</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="field">
+                          <label>Prioridad</label>
+                          <select class="form-control" id="prioriry">
+                              <option selected="selected" value="review">Crítica</option>
+                              <option value="high">Alta</option>
+                              <option value="normal">Normal</option>
+                              <option value="low">Baja</option>
+                          </select>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="field mrgTop-2">
+                      <label>Categoría</label>
+                      <select class="form-control" id="category">
+                          <option selected="selected">Mantenimiento</option>
+                          <option>Productos</option>
+                          <option>Importar datos</option>
+                      </select>
+                  </div>
+
+                  <div class="field">
+                      <label>Asignado a:</label>
+                      <select class="form-control" id="user">
+                          <option selected="selected">Estela Herrera</option>
+                          <option>Emilio Chavez</option>
+                          <option>Patricia Rivera</option>
+                          <option>Luis Martinez</option>
+                          <option>Cristina Fernandez</option>
+                          <option>Jorge Tinajero</option>
+                      </select>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </div>
+          <!-- Informacion general -->
+          <div class="box box-default">
+              <div class="box-header with-border">
+                  <h3 class="box-title">Descripción</h3>
+              </div>
+              <div class="box-body">
+                <div class="field">
+                    <label>Nombre</label>
+                    <input type="text" name="nameIncidence" class="form-control" placeholder="Nombre">
+                </div>
+                <div class="field">
+                    <label>Descripción</label>
+                    <textarea class="form-control" name="descriptionIncidence" rows="3" placeholder="Descripción"></textarea>
+                </div>
+              </div>
+          </div>
+          <!-- Buttons -->
+          <a href="#" class="btn btn-gray" id="btnCancelIncidence">Cancel</a>
+          <button type="submit" class="btn btn-save pull-right">Guardar</button>
+      </form>
+  </section>
+</template>

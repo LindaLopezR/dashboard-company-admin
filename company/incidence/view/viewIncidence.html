@@ -1,0 +1,63 @@
+<template name="viewIncidence">
+	<section class="content-header" >
+        <h1>
+            Gecko, Inc.
+            <small>Incidencia</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/mainDashboard" id="btnDashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="/companyDashboard/:_id" id="btnCompanyDashboard">Gecko</a></li>
+            <li class="active">Incidencia</li>
+        </ol>
+    </section>
+
+    <div class="content" style="height: 550px">
+        <section class="invoice">
+            <h2 class="page-header">
+                <i class="fa fa-pencil-square-o"></i> Mantenimiento
+                <small class="pull-right">Date: 2/10/2014</small>
+            </h2>
+      
+            <div class="row contentIncidence">
+                <div class="col-xs-6 col-md-3">
+                    <dl>
+                        <dt>ID</dt>
+                        <dd>46363425</dd>
+                        <dt>Fecha programada</dt>
+                        <dd>10/02/2015 2:30 PM</dd>
+                        <dt>Fecha fin</dt>
+                        <dd>09/12/2016 9:30 AM</dd>
+                    </dl>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <dl>
+                        <dt>Estado</dt>
+                        <dd>Abierta</dd>
+                        <dt>Prioridad</dt>
+                        <dd>Crítica</dd>
+                        <dt>Asignada a</dt>
+                        <dd>Estela Herrera</dd>
+                    </dl>
+                </div>
+
+                <div class="col-md-6">
+                    <dl>
+                        <dt>Nombre</dt>
+                        <dd>Mantenimiento</dd>
+                        <dt>Descripción</dt>
+                        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sed deserunt voluptatum itaque libero, quae illum omnis neque cupiditate obcaecati. Voluptatum culpa expedita explicabo ex deleniti, commodi rem quam temporibus!</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="row no-print">
+                <div class="col-xs-12">
+                    <a href="#" target="_blank" class="btn btn-primary pull-right" id="btnPrint"><i class="fa fa-print"></i> Imprimir</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="clearfix"></div>
+    </div>
+</template>

@@ -1,0 +1,22 @@
+<template name="statisticsReport">
+	{{#if showReportStatistics}}
+		<div class="row">
+			<div class="col-md-9">
+				<div class="chart">
+					<canvas id="barReport" style="height: 100px;"></canvas>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<ul class="chart-legend clearfix">
+					<li><i class="fa fa-circle-o" style="color: rgb(0, 40, 65)"></i> Mobile</li>
+					<li><i class="fa fa-circle-o" style="color: rgb(60,141,188)"></i> Email</li>
+					<li><i class="fa fa-circle-o" style="color: rgb(168,226,243)"></i> Reportes</li>
+				</ul>
+			</div>
+		</div>
+	{{else}}
+	 	{{>noDataReport}}
+	{{/if}}
+</template>
+
+
